@@ -1,6 +1,7 @@
 version: "3.7"
 services:
   postgres:
+    container_name: main-postgres
     image: postgres:15-alpine
     restart: always
     environment:
@@ -29,6 +30,7 @@ services:
       - test-db-data:/var/lib/postgresql/data:cached
 
   backend:
+    container_name: backend
     build:
       context: backend
       dockerfile: Dockerfile

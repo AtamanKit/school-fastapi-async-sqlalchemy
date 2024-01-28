@@ -6,7 +6,8 @@ class Settings(BaseSettings):
     echo_sql: bool = True
     test: bool = False
     project_name: str = "My FastAPI Project"
-    outh_token_sercret: str = "my_dev_secret"
+    oauth_token_secret: str = "my_dev_secret"
+    debug_logs: bool = True
 
 
 settings = Settings()

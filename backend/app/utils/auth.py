@@ -3,9 +3,9 @@ from app.config import settings
 from fastapi.security import OAuth2PasswordBearer
 from passlib.context import CryptContext
 
-outh2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/token")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/token")
 
-pwd_context = CryptContext(shemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 ACCESS_TOKEN_SECRET_KEY = settings.oauth_token_secret
 ACCESS_TOKEN_ALGORITHM = "HS256"
